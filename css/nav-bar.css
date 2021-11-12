@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 55px;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color:teal;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}    
+
+.menu a::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: cornflowerblue;
+    transition: all .6s;
+
+}
+
+.menu a:hover::before{
+    width: 100%;
+}
+
+
+.menu a::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 5px;
+    background-color: cornflowerblue;
+    transition: all .6s;
+}
+
+.menu a:hover::after{
+    width: 100%;
+}
